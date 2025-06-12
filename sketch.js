@@ -23,8 +23,8 @@ function draw() {
   fill("#FFFDD0")
   textSize(16);
   textAlign(CENTER);
-  text("🌾 Campo", width / 5, 20);
-  text("🏙️ Cidade", 3 * width / 5, 20);
+  text("🌾'L'para Campo", width / 4, 20);
+  text( "🏙️ 'A' para Cidade", 3 * width / 4, 20);
   text("Pontuação: " + score, width / 2, height - 20);
 
   if (gameOver) {
@@ -55,10 +55,10 @@ function keyPressed() {
     novoItem();
   }
 
-  if (!gameOver && (key === 'l' || key === 'a')) {
+  if (!gameOver && (key === 'L' || key === 'A')) {
     if (
-      (key === 'l' && item.type === 'campo') ||
-      (key === 'a' && item.type === 'cidade')
+      (key === 'L' && item.type === 'campo') ||
+      (key === 'A' && item.type === 'cidade')
     ) {
       score++;
     } else {
@@ -81,5 +81,9 @@ function novoItem() {
   item.x = random(100, 300);
   item.y = 0;
 }
+ 
+
+
+
 
 
